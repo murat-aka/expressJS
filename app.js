@@ -5,6 +5,8 @@ var app = express();
 app.set('view engine','ejs');
 //app.set('views', __dirname + '/views');
 
+app.locals.pagetitle = "Awesome Website";
+
 
 app.get("/", function(req,res){
     
