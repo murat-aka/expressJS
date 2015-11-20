@@ -40,6 +40,16 @@ app.get("/who/:name?/:title?", function(req,res){
 });
 
 
+app.get("*", function(req,res){
+    
+  
+    
+    res.send("Bad route");
+    
+
+});
+
+
 
 var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
     
