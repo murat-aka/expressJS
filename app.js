@@ -13,6 +13,7 @@ app.get("/", function(req,res){
        
        
        title: 'Home',
+       classname: 'home',
        users: ['ray', 'mur', 'sam']
        
        
@@ -24,9 +25,18 @@ app.get("/", function(req,res){
 
 
 
-app.get("/me", function(req,res){
+app.get("/about", function(req,res){
     
-    res.send("new route me");
+      res.render('default', {
+       
+       
+       title: 'About Us',
+       classname: 'about'
+       
+       
+       
+       
+   });
     
 
 });
