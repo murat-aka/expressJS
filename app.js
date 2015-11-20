@@ -34,7 +34,7 @@ app.get("/who/:name?:title?", function(req,res){
     var name = req.params.name;
     var title = req.params.title;
     
-    res.send(name + " was here");
+    res.send("<p> name: " + name + " <br>title: " + title + "</p>");
     
 
 });
