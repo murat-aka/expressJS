@@ -11,6 +11,25 @@ app.get("/", function(req,res){
 
 
 
+app.get("/me", function(req,res){
+    
+    res.send("new route me");
+    
+
+});
+
+
+app.get("/who/:name?", function(req,res){
+    
+    var name = req.params.name;
+    
+    res.send(name + " was here");
+    
+
+});
+
+
+
 var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
     
   var addr = server.address();
