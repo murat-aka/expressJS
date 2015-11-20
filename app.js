@@ -29,6 +29,17 @@ app.get("/who/:name?", function(req,res){
 });
 
 
+app.get("/who/:name?:title?", function(req,res){
+    
+    var name = req.params.name;
+    var title = req.params.title;
+    
+    res.send(name + " was here");
+    
+
+});
+
+
 
 var server = app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
     
