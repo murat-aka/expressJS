@@ -16,7 +16,23 @@
 
        <p> ipsom </p>
        
-
+ 
+     <%  if(typeof(users)!== 'undefined'){ %>
+     
+     
+        <ul>
+            
+            <% for(var i = 0 ; i<  users.length ;i++){%>
+            
+            <li><%= users[i] %></li>
+            
+            <% } %>
+            
+        </ul>
+     
+     <% } %>
+ 
+ 
     
     </div><!--container div -->
     
