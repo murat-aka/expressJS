@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var routes = require("./routes");
 
 
 app.set('view engine','ejs');
@@ -8,40 +9,9 @@ app.set('view engine','ejs');
 app.locals.pagetitle = "Awesome Website";
 
 
-app.get("/", function(req,res){
-    
-   // res.send("<H1>Hello </H1>Express");
-   res.render('default', {
-       
-       
-       title: 'Home',
-       classname: 'home',
-       users: ['ray', 'mur', 'sam']
-       
-       
-       
-   });
-    
+app.get("/", routes.index);
+app.get("/about", routes.about);
 
-});
-
-
-
-app.get("/about", function(req,res){
-    
-      res.render('default', {
-       
-       
-       title: 'About Us',
-       classname: 'about'
-       
-       
-       
-       
-   });
-    
-
-});
 
 
 app.get("/who/:name?", function(req,res){
